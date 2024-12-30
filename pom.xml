@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>parent-project</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.2</version>
+        <relativePath/>  <!-- This is typically left empty or to point to the parent POM if not the root -->
+    </parent>
+
+    <!-- Declare modules of your multi-module project -->
+    <modules>
+        <module>aesRsa</module>
+        <module>rateLimit</module>
+        <!-- Add other modules here -->
+    </modules>
+
+    <!-- Shared properties -->
+    <properties>
+        <java.version>21</java.version>
+    </properties>
+
+    <!-- Dependencies common to all modules -->
+    <dependencies>
+        <!-- SpringDoc OpenAPI UI for Swagger documentation -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- Build section for plugins if needed -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
