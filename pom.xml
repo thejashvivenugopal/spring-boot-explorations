@@ -17,6 +17,7 @@
     <modules>
         <module>aesRsa</module>
         <module>rateLimit</module>
+        <module>redisMongo</module>
         <!-- Add other modules here -->
     </modules>
 
